@@ -1,7 +1,7 @@
 ## Pour toi mon petit Jérôme
 
 J'ai utilisé Vite pour ce projet afin de gagner du temps de dev et mise en place, faut pas déconner.
-Pour lancer le projet en local :
+Pour lancer le projet en local (prérequis : avoir Node installé sur ton Mac) :
 
 ```sh
 npm install
