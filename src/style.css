@@ -1,24 +1,92 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "./style/_variables.css";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-family: var(--ff-sans);
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  /* color-scheme: light dark; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app {
-  background-color: #f00;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-cursive);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 
-  h2 {
-    background-color: #0F0;
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 0 5px;
   }
 }
 
+header {
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    
+    .container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: block;
+      }
+      
+      img {
+        width: auto;
+        height: calc(var(--header-height) - 20px);
+      }
+    }
+
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+}
 

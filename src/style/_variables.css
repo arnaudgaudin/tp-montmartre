@@ -1,0 +1,13 @@
+:root {
+  /* define variables */
+  --ff-cursive: 'Parisienne', cursive;
+  --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
+  
+  --primary-color: #00B1BB;
+  --secondary-color: #7F8183;
+  --text-color: #333;
+  --bg-color: #fefefe;
+  --error-color: #FF6B6B;
+
+  --header-height: 60px;
+}
