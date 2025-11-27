@@ -15,6 +15,16 @@
   }
 }
 
+/* Styles par défaut pour tous les icônes Lucide */
+[data-lucide] {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  stroke: currentColor; 
+  fill: none;
+}
+
 .text-center {
   text-align: center;
 }

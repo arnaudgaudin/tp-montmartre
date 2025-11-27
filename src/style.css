@@ -39,6 +39,17 @@ p {
   }
 }
 
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 /* gestion du header */
 header {
   height: var(--header-height);
@@ -72,6 +83,8 @@ header {
     
     .title {
       font-family: var(--ff-cursive);
+      font-size: var(--fs-lg);
+      line-height: 1;
     }
   }
 
@@ -82,11 +95,42 @@ header {
       gap: 15px;
       align-items: center;
       justify-content: center;
+      font-size: var(--fs-sm);
     }
+
     a {
       color: #fff;
       font-weight: 500;
+      text-decoration: none;
+      padding: .25rem .5rem;
+
+
+      &.active {
+        color: var(--secondary-color);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--secondary-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .rs {
+    margin-left: auto;
+    a {
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        color: var(--secondary-color);
+      }
     }
   }
 }
 
+.rs {
+  display: flex;
+  gap: var(--space-1);
+}
