@@ -1,13 +1,14 @@
-@import "normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import "normalize.css";
 @import "./style/_variables.css";
+@import "./style/_utilities.css";
 
+/* styles globaux */
 :root {
-
   font-family: var(--ff-sans);
-  line-height: 1.5;
-  font-weight: 500;
+  font-size: var(--fs-de);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-de);
 
   /* color-scheme: light dark; */
   background-color: var(--bg-color);
@@ -19,74 +20,73 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* un peu de style basique... */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-cursive);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-sm);
   margin-top: 0;
-  margin-bottom: 0.5rem;
-}
 
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (max-width: 768px) {
-    width: 95%;
-    padding: 0 10px;
-  }
-
-  @media (max-width: 480px) {
-    width: 100%;
-    padding: 0 5px;
+  & + * {
+    margin-top: var(--space-2);
   }
 }
 
+p {
+  margin: 0;
+  & + p {
+    margin-top: var(--space-1);
+  }
+}
+
+/* gestion du header */
 header {
-    height: var(--header-height);
-    background-color: var(--primary-color);
-    color: #fff;
+  height: var(--header-height);
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    gap: .5rem;
+
+    a {
+      display: block;
+    }
     
-    .container {
+    img {
+      width: auto;
+      height: calc(var(--header-height) - 20px);
+    }
+    
+    .title {
+      font-family: var(--ff-cursive);
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
       display: flex;
-      gap: 10px;
-      flex-wrap: nowrap;
+      gap: 15px;
       align-items: center;
       justify-content: center;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-
-      a {
-        display: block;
-      }
-      
-      img {
-        width: auto;
-        height: calc(var(--header-height) - 20px);
-      }
+    a {
+      color: #fff;
+      font-weight: 500;
     }
-
-    nav {
-      ul {
-        list-style: none;
-        display: flex;
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
-      }
-      a {
-        color: #fff;
-        font-weight: 500;
-      }
-    }
+  }
 }
 
