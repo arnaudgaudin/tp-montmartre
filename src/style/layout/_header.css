@@ -2,7 +2,7 @@
 header {
   position: relative;
   min-height: var(--header-height);
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: #fff;
   display: flex;
   align-items: center;
@@ -83,12 +83,12 @@ header {
           transition: background-color 0.2s, color 0.2s;
           
           &.active {
-            color: var(--secondary-color);
+            color: var(--secondary);
           }
 
           &:hover,
           &:focus {
-            background-color: var(--secondary-color);
+            background-color: var(--secondary);
             color: #000;
             text-decoration: none;
           }
@@ -136,7 +136,7 @@ header {
 
       &:hover,
       &:focus {
-        color: var(--secondary-color);
+        color: var(--secondary);
       }
     }
     
@@ -161,7 +161,7 @@ header {
 
       &:hover,
       &:focus {
-        color: var(--secondary-color);
+        color: var(--secondary);
       }
     }
   }

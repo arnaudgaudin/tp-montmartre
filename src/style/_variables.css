@@ -1,23 +1,23 @@
 :root {
   /* theme de couleurs */
-  --primary-color-hsl: 25 76% 31%;
-  --secondary-color-hsl: 28 100% 86%;
+  --primary-hsl: 25 76% 31%;
+  --secondary-hsl: 28 100% 86%;
   /* Autres variations possibles : */
-  /* --primary-color-hsl: 0 68% 41%;
-  --secondary-color-hsl: 39 77% 83%; */
-  /* --primary-color-hsl: 25 75% 47%;
-  --secondary-color-hsl: 197 72% 73%; */
+  /* --primary-hsl: 0 68% 41%;
+  --secondary-hsl: 39 77% 83%; */
+  /* --primary-hsl: 25 75% 47%;
+  --secondary-hsl: 197 72% 73%; */
 
   /* raccourcis pour accès direct */
-  --primary-color: hsl(var(--primary-color-hsl));
-  --secondary-color: hsl(var(--secondary-color-hsl));
+  --primary: hsl(var(--primary-hsl));
+  --secondary: hsl(var(--secondary-hsl));
 
-  --primary-dark: color-mix(in hsl, var(--primary-color) 60%, black);
-  --primary-light: color-mix(in hsl, var(--primary-color) 80%, white);
+  --primary-dark: color-mix(in hsl, var(--primary) 60%, black);
+  --primary-light: color-mix(in hsl, var(--primary) 80%, white);
 
   /* Secondary */
-  --secondary-dark: color-mix(in hsl, var(--secondary-color) 60%, black);
-  --secondary-light: color-mix(in hsl, var(--secondary-color) 80%, white);
+  --secondary-dark: color-mix(in hsl, var(--secondary) 60%, black);
+  --secondary-light: color-mix(in hsl, var(--secondary) 80%, white);
   
   --text-color: #333;
   --bg-color: #fefefe;
