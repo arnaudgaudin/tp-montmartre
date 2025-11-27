@@ -1,5 +1,7 @@
 export default {
   plugins: {
-    'postcss-nesting': {}
+    'postcss-extend-rule': {},
+    'postcss-nested': {},
+    // 'postcss-import': {},
   }
 };
