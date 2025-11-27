@@ -77,15 +77,23 @@ header {
       overflow: hidden;
       margin-top: -100%;
       opacity: 0;
-      transition: var(--transition-base);
+      transition-property: margin-top, opacity;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+      trandition-delays: 0s, var(--transition-duration);
 
       li {
+        text-align: center;
+        @media (min-width: 960px) {
+          text-align: left;
+        }
+
         a {
-          display: flex;
+          display: inline-flex;
           align-items: center;
           justify-content: center;
           gap: var(--space-2);
-          padding: calc(var(--space-2) / 2) var(--space-2);
+          padding: var(--space-1) var(--space-2);
           
           
           font-size: var(--fs-sm);
@@ -107,6 +115,7 @@ header {
           }
 
           @media (min-width: 960px) {
+            display: flex;
             padding: var(--space-2) var(--space-3);
           }
         }

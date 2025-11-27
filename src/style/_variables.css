@@ -47,5 +47,7 @@
   --border-radius: .5rem;
 
   /* gestion transition par défaut */
-  --transition-base: all 0.3s ease-out;
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-out;
+  --transition-base: all var(--transition-duration) var(--transition-timing-function);
 }
