@@ -52,25 +52,25 @@ a {
 
 /* gestion du header */
 header {
+  position: relative;
   height: var(--header-height);
   background-color: var(--primary-color);
   color: #fff;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  
+
   .container {
     display: flex;
-    gap: 10px;
-    flex-wrap: nowrap;
+    gap: var(--space-2);
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .logo {
     display: flex;
+    gap: var(--space-1);
     align-items: center;
-    gap: .5rem;
 
     a {
       display: block;
@@ -92,23 +92,26 @@ header {
     ul {
       list-style: none;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* menu vertical mobile */
       gap: var(--space-1);
-      padding: 0;
       margin: 0;
-      align-items: flex-start;
+      padding: 0;
+      overflow: hidden;
+      max-height: 0; /* menu fermé par défaut */
+      transition: max-height 0.3s ease;
 
       li {
         a {
           display: flex;
           align-items: center;
           gap: var(--space-1);
-          padding: var(--space-1) var(--space-2);
+          padding: 0 var(--space-2);
+          height: var(--header-height);
+          font-size: var(--fs-sm);
           color: #fff;
           text-decoration: none;
           border-radius: .25rem;
           transition: background-color 0.2s, color 0.2s;
-          font-size: var(--fs-sm);
 
           i[data-lucide] {
             width: 20px;
@@ -127,27 +130,44 @@ header {
           }
         }
       }
-      
+
+      /* menu ouvert */
+      &.open {
+        max-height: 1000px; /* assez grand pour contenir tous les liens */
+      }
+
       @media (min-width: 768px) {
         flex-direction: row;
-        justify-content: center;
+        max-height: none;
+        li a {
+          height: var(--header-height);
+        }
       }
     }
   }
 
+  /* Bouton hamburger */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 10;
 
-  .rs {
-    margin-left: auto;
-    a {
-      color: #fff;
+    i[data-lucide] {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
 
-      &:hover,
-      &:focus {
-        color: var(--secondary-color);
-      }
+    @media (min-width: 768px) {
+      display: none; /* masqué sur desktop */
     }
   }
 }
+
 
 .rs {
   display: flex;
