@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   links.forEach(link => link.classList.add("active"));
 
   //gestion du menu responsive
-  const menuToggle = document.querySelector(".menu-toggle");
+  const menuToggle = document.querySelector(".menu-toggle .toggle");
   const menu = document.querySelector("header nav ul");
 
   menuToggle.addEventListener("click", () => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Optionnel : fermer le menu si on clique sur un lien
   menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 960) {
         menu.classList.remove("open");
       }
     });

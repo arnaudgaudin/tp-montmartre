@@ -31,4 +31,7 @@
   --space-1: .5rem;
   --space-2: 1rem;
   --space-3: 2rem;
+
+  /* gestion transition par défaut */
+  --transition-base: all 0.3s ease-out;
 }

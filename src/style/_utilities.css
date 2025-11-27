@@ -23,6 +23,7 @@
   vertical-align: middle;
   stroke: currentColor; 
   fill: none;
+  transition: var(--transition-base);
 }
 
 .text-center {

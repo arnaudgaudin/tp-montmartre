@@ -42,7 +42,7 @@ p {
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  transition: var(--transition-base);
 
   &:hover,
   &:focus {
@@ -53,34 +53,44 @@ a {
 /* gestion du header */
 header {
   position: relative;
-  height: var(--header-height);
+  min-height: var(--header-height);
   background-color: var(--primary-color);
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 var(--space-2);
+
+  @media (min-width: 960px) {
+    height: var(--header-height);
+  }
 
   .container {
     display: flex;
     gap: var(--space-2);
     align-items: center;
     justify-content: space-between;
+    align-items: flex-start;
+
+    @media (min-width: 960px) {
+      align-items: center;
+    }
   }
 
   .logo {
     display: flex;
-    gap: var(--space-1);
+    gap: var(--space-2);
     align-items: center;
+    padding: var(--space-1) 0;
 
     a {
       display: block;
     }
-    
+
     img {
       width: auto;
       height: calc(var(--header-height) - 20px);
     }
-    
+
     .title {
       font-family: var(--ff-cursive);
       font-size: var(--fs-lg);
@@ -88,17 +98,28 @@ header {
     }
   }
 
+  /* taille de toutes les icônes */
+  i[data-lucide] {
+    width: 20px;
+    height: 20px;
+  }
+
   nav {
+    order: 2;
+    width: 100%;
+    padding: var(--space-1) 0;
+
     ul {
       list-style: none;
       display: flex;
-      flex-direction: column; /* menu vertical mobile */
+      flex-direction: column; /* vertical mobile */
       gap: var(--space-1);
       margin: 0;
       padding: 0;
       overflow: hidden;
-      max-height: 0; /* menu fermé par défaut */
-      transition: max-height 0.3s ease;
+      margin-top: -100%;
+      opacity: 0;
+      transition: var(--transition-base);
 
       li {
         a {
@@ -106,18 +127,13 @@ header {
           align-items: center;
           gap: var(--space-1);
           padding: 0 var(--space-2);
-          height: var(--header-height);
+          
           font-size: var(--fs-sm);
           color: #fff;
           text-decoration: none;
           border-radius: .25rem;
           transition: background-color 0.2s, color 0.2s;
-
-          i[data-lucide] {
-            width: 20px;
-            height: 20px;
-          }
-
+          
           &.active {
             color: var(--secondary-color);
           }
@@ -131,14 +147,22 @@ header {
         }
       }
 
-      /* menu ouvert */
       &.open {
-        max-height: 1000px; /* assez grand pour contenir tous les liens */
+        margin-top: 0;
+        opacity: 1;
       }
 
-      @media (min-width: 768px) {
+      /* désactivation des liens quand le menu est fermé sur mobile */
+      @media (max-width: 960px) {
+        &:not(.open) a {
+          pointer-events: none;
+        }
+      }
+
+      @media (min-width: 960px) {
         flex-direction: row;
-        max-height: none;
+        margin-top: 0;
+        opacity: 1;
         li a {
           height: var(--header-height);
         }
@@ -148,26 +172,52 @@ header {
 
   /* Bouton hamburger */
   .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 0.5rem;
+    order: 3;
     z-index: 10;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
 
-    i[data-lucide] {
-      width: 24px;
-      height: 24px;
-      stroke: currentColor;
+    .toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      padding: 0.5rem;
+
+      &:hover,
+      &:focus {
+        color: var(--secondary-color);
+      }
+    }
+    
+    @media (min-width: 960px) {
+      display: none;
+    }
+  }
+
+  .rs {
+    order: 2; /* bouton hamburger apparaîtra après rs sur mobile */
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 960px) {
+      height: auto;
     }
 
-    @media (min-width: 768px) {
-      display: none; /* masqué sur desktop */
+    a {
+      color: #fff;
+      transition: color 0.2s;
+
+      &:hover,
+      &:focus {
+        color: var(--secondary-color);
+      }
     }
   }
 }
-
 
 .rs {
   display: flex;
