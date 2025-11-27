@@ -1,0 +1,45 @@
+:root {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-de);
+  font-weight: var(--fw-normal);
+  line-height: var(--lh-de);
+
+  /* color-scheme: light dark; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* un peu de style basique... */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-cursive);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-sm);
+  margin-top: 0;
+
+  & + * {
+    margin-top: var(--space-2);
+  }
+}
+
+p {
+  margin: 0;
+  & + p {
+    margin-top: var(--space-1);
+  }
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-base);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
