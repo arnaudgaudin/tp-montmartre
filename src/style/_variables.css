@@ -1,8 +1,14 @@
 :root {
-  /* define variables */
-  
-  --primary-color: #00B1BB;
-  --secondary-color: #7F8183;
+  /* theme de couleurs */
+  --primary-color: #8B4513;
+  --secondary-color: #FFDAB9;
+
+  /* Autres variations possibles : */
+  /* --primary-color: #B22222;
+  --secondary-color: #F5DEB3; */
+  /* --primary-color: #D2691E;
+  --secondary-color: #87CEEB; */
+
   --text-color: #333;
   --bg-color: #fefefe;
   --error-color: #FF6B6B;
