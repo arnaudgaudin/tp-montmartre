@@ -12,12 +12,12 @@
   --primary: hsl(var(--primary-hsl));
   --secondary: hsl(var(--secondary-hsl));
 
-  --primary-dark: color-mix(in hsl, var(--primary) 60%, black);
-  --primary-light: color-mix(in hsl, var(--primary) 80%, white);
+  --primary-dark: color-mix(in hsl, hsl(var(--primary-hsl)) 60%, black);
+  --primary-light: color-mix(in hsl, hsl(var(--primary-hsl)) 80%, white);
 
   /* Secondary */
-  --secondary-dark: color-mix(in hsl, var(--secondary) 60%, black);
-  --secondary-light: color-mix(in hsl, var(--secondary) 80%, white);
+  --secondary-dark: color-mix(in hsl, hsl(var(--secondary-hsl)) 60%, black);
+  --secondary-light: color-mix(in hsl, hsl(var(--secondary-hsl)) 80%, white);
   
   --text-color: #333;
   --bg-color: #fefefe;
