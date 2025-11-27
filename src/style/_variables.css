@@ -1,7 +1,5 @@
 :root {
   /* define variables */
-  --ff-cursive: 'Parisienne', cursive;
-  --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
   
   --primary-color: #00B1BB;
   --secondary-color: #7F8183;
@@ -10,4 +8,21 @@
   --error-color: #FF6B6B;
 
   --header-height: 60px;
+  
+  --ff-cursive: 'Parisienne', cursive;
+  --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
+
+  --fs-de: 16px;
+  --fs-lg: 1.25rem;
+  --fs-sm: 0.875rem;
+  --lh-de: 1.5;
+  --lh-sm: 1.4;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  /* définition des marges */
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
 }
