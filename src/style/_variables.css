@@ -29,8 +29,8 @@
   --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
 
   --fs-de: 16px;
-  --fs-lg: 1.75rem;
-  --fs-sm: 0.875rem;
+  --fs-lg: 1.25rem;
+  --fs-sm: 0.75rem;
   --lh-de: 1.5;
   --lh-sm: 1.4;
 
@@ -50,4 +50,10 @@
   --transition-duration: 0.3s;
   --transition-timing-function: ease-out;
   --transition-base: all var(--transition-duration) var(--transition-timing-function);
+
+  /* grossissement polices en desktop */
+  @media (min-width: 960px) {
+    --fs-lg: 1.75rem;
+    --fs-sm: 0.875rem;
+  }
 }

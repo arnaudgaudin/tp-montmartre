@@ -1,13 +1,12 @@
 /* gestion du header */
 header {
   position: relative;
-  min-height: var(--header-height);
   background-color: var(--primary);
   color: #fff;
   display: flex;
   align-items: center;
   padding: 0 var(--space-3);
-
+  
   @media (min-width: 960px) {
     height: var(--header-height);
   }
@@ -16,7 +15,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 
     @media (min-width: 960px) {
@@ -30,7 +29,7 @@ header {
     order: 1;
     gap: var(--space-3);
     align-items: center;
-    height: var(--header-height);
+    padding: var(--space-2) 0;
 
     a {
       display: block;
@@ -43,11 +42,14 @@ header {
 
     .title {
       font-family: var(--ff-cursive);
-      font-size: var(--fs-de);
+      font-size: var(--fs-lg);
       line-height: 1;
-      
+      text-align: left;
+
       @media (min-width: 960px) {
-        font-size: var(--fs-lg);
+        .break {
+          display: none;
+        }
       }
     }
   }
@@ -80,7 +82,7 @@ header {
       transition-property: margin-top, opacity;
       transition-duration: var(--transition-duration);
       transition-timing-function: var(--transition-timing-function);
-      trandition-delays: 0s, var(--transition-duration);
+      transition-delay: var(--transition-duration), 0s;
 
       li {
         text-align: center;
@@ -124,6 +126,7 @@ header {
       &.open {
         margin-top: 0;
         opacity: 1;
+        transition-delay: 0s, var(--transition-duration);
       }
 
       /* désactivation des liens quand le menu est fermé sur mobile */
@@ -147,14 +150,10 @@ header {
   /* réseaux sociaux */
   .rs {
     order: 3;
-    height: var(--header-height);
     display: flex;
     align-items: center;
     margin-left: auto;
-
-    @media (min-width: 960px) {
-      height: auto;
-    }
+    padding: var(--space-2) 0;
 
     a {
       color: #fff;
@@ -173,9 +172,9 @@ header {
   .menu-toggle {
     order: 4;
     z-index: 10;
-    height: var(--header-height);
     display: flex;
     align-items: center;
+    padding: var(--space-2) 0;
 
     .toggle {
       display: block;
@@ -183,7 +182,6 @@ header {
       border: none;
       color: #fff;
       cursor: pointer;
-      padding: 0.5rem;
 
       &:hover,
       &:focus {

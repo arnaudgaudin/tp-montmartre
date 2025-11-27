@@ -1,0 +1,25 @@
+.section-map {
+  background-color: var(--secondary-dark);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+
+  .map-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 3 / 2;
+    
+    @media (min-width: 768px) {
+      aspect-ratio: 2 / 1;
+    }
+    
+    @media (min-width: 960px) {
+      aspect-ratio: 3 / 1;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
