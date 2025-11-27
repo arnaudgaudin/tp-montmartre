@@ -6,7 +6,7 @@ header {
   color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-3);
 
   @media (min-width: 960px) {
     height: var(--header-height);
@@ -28,7 +28,7 @@ header {
   .logo {
     display: flex;
     order: 1;
-    gap: var(--space-2);
+    gap: var(--space-3);
     align-items: center;
     height: var(--header-height);
 
@@ -38,7 +38,7 @@ header {
 
     img {
       width: auto;
-      height: calc(var(--header-height) - var(--space-2) * 2);
+      height: calc(var(--header-height) - var(--space-3) * 2);
     }
 
     .title {
@@ -71,9 +71,9 @@ header {
       list-style: none;
       display: flex;
       flex-direction: column; /* vertical mobile */
-      gap: var(--space-1);
+      gap: var(--space-2);
       margin: 0;
-      padding: var(--space-1) 0;
+      padding: var(--space-2) 0;
       overflow: hidden;
       margin-top: -100%;
       opacity: 0;
@@ -84,8 +84,8 @@ header {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: var(--space-1);
-          padding: calc(var(--space-1) / 2) var(--space-1);
+          gap: var(--space-2);
+          padding: calc(var(--space-2) / 2) var(--space-2);
           
           
           font-size: var(--fs-sm);
@@ -107,7 +107,7 @@ header {
           }
 
           @media (min-width: 960px) {
-            padding: var(--space-1) var(--space-2);
+            padding: var(--space-2) var(--space-3);
           }
         }
       }
