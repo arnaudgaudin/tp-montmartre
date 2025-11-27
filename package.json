@@ -16,6 +16,7 @@
     "vite-plugin-include-html": "^1.0.0"
   },
   "dependencies": {
+    "lucide": "^0.555.0",
     "normalize.css": "^8.0.1"
   }
 }
