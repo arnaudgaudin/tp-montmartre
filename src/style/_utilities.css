@@ -1,0 +1,48 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 {
+  margin-top: var(--space-1);
+}
+
+.mb-1 {
+  margin-bottom: var(--space-1);
+}
+
+.mt-2 {
+  margin-top: var(--space-2);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+
+.mt-3 {
+  margin-top: var(--space-3);
+}
+
+.mb-3 {
+  margin-bottom: var(--space-3);
+}
