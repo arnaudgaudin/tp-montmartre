@@ -1,8 +1,15 @@
 import { createIcons, icons } from 'lucide';
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import './style.css';
 
 // Génère tous les <i data-lucide="..."> en SVG
 createIcons({ icons });
+
+//Lancement FancyBox
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
 
 //au chargement du DOM
 document.addEventListener("DOMContentLoaded", () => {

@@ -16,6 +16,7 @@
     "vite-plugin-include-html": "^1.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.6",
     "lucide": "^0.555.0",
     "normalize.css": "^8.0.1"
   }
