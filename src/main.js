@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   links.forEach(link => link.classList.add("active"));
 
   //gestion du menu responsive
-  const menuToggle = document.querySelector(".menu-toggle .toggle");
+  const menuToggle = document.querySelector(".menu-toggle .menu-toggle-btn");
   const menu = document.querySelector("header nav ul");
 
   menuToggle.addEventListener("click", () => {
@@ -28,5 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.remove("open");
       }
     });
+  });
+
+  //gestion du champ de recherche dans la navbar
+  const searchBtn = document.querySelector('header .search-btn');
+  searchBtn.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle("active");
   });
 });
