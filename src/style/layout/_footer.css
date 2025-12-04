@@ -1,0 +1,10 @@
+/* gestion du footer */
+footer {
+  position: relative;
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+  
+}
