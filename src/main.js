@@ -31,8 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //gestion du champ de recherche dans la navbar
+  //todo : handle input validation to close itself
   const searchBtn = document.querySelector('header .search-btn');
   searchBtn.addEventListener('click', (e) => {
     e.currentTarget.classList.toggle("active");
+    menu.classList.toggle("searchActive");
   });
 });

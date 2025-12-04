@@ -85,6 +85,11 @@ header {
       transition-timing-function: var(--transition-timing-function);
       transition-delay: var(--transition-duration), 0s;
 
+      /* désactivation des liens si menu recherche actif */
+      &.searchActive {
+        pointer-events: none;
+      }
+
       li {
         text-align: center;
         @media (min-width: 960px) {
@@ -102,7 +107,7 @@ header {
           font-size: var(--fs-sm);
           color: #fff;
           text-decoration: none;
-          border-radius: var(--border-radius);
+          border-radius: var(--border-radiu-de);
           transition: background-color 0.2s, color 0.2s;
           white-space: nowrap;
           
@@ -149,10 +154,17 @@ header {
   }
 
   .search {
+    --btn-size: 1rem;
+    position: relative;
     order: 2;
+    margin-left: auto;
     @media (min-width: 960px) {
       order: 3;
     }
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 
     &-btn {
       background-color: transparent;
@@ -162,8 +174,8 @@ header {
       transition: color 0.2s ease-out;
 
       .lucide {
-        width: 1rem;
-        height: 1rem;
+        width: var(--btn-size);
+        height: var(--btn-size);
       }
 
       &:hover,
@@ -173,10 +185,27 @@ header {
       }
 
       &:not(.active) + input {
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        transform: translateY(calc(var(--header-height) / -2));
+        pointer-events: none;
       }
     }
 
+    &-input {
+      position: absolute;
+      right: calc(100% + var(--space-2));
+      border-radius: var(--border-radiu-lg);
+      border: 2px solid var(--secondary);
+      transition: var(--transition-base);
+      padding: var(--space-1);
+      font-size: var(--fs-sm);
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 2px 2px 4px hsl(var(--primary-hsl) / 0.5);
+      }
+    }
   }
 
   /* réseaux sociaux */
@@ -187,7 +216,6 @@ header {
     }
     display: flex;
     align-items: center;
-    margin-left: auto;
     padding: var(--space-2) 0;
 
     a {

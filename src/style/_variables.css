@@ -45,10 +45,11 @@
   --space-4 : 2rem;
 
   /* définition des rayons de bordure */
-  --border-radius: .5rem;
+  --border-radiu-de: .5rem;
+  --border-radiu-lg: 1rem;
 
   /* gestion transition par défaut */
-  --transition-duration: 0.3s;
+  --transition-duration: 300ms;
   --transition-timing-function: ease-out;
   --transition-base: all var(--transition-duration) var(--transition-timing-function);
 

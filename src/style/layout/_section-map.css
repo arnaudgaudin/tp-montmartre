@@ -4,7 +4,7 @@
   padding-bottom: var(--space-4);
 
   .map-container {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radiu-de);
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     aspect-ratio: 3 / 2;
