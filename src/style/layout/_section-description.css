@@ -1,0 +1,93 @@
+.description {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: var(--space-4);
+
+    @media(max-width:900px) {
+        grid-template-columns:1fr;
+    }
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+        border-radius: var(--border-radiu-lg);
+        border: 1px solid var(--secondary);
+
+        & > * {
+            margin: 0;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--primary);
+        }
+    }
+
+    .prop {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-2) 0;
+
+        &:not(:last-child) { border-bottom: 1px dashed var(--secondary); }
+    }
+
+    .rooms-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: var(--space-2) 0;
+            &:not(:last-child) { border-bottom: 1px dashed var(--secondary); }
+        }
+    }
+
+    .amenities {
+        display: flex; 
+        flex-wrap: wrap;
+        gap: var(--space-1);
+
+        .chip {
+            background: #fefefe;
+            padding: var(--space-1) var(--space-2);
+            border-radius: var(--border-radiu-lg);
+            font-size: var(--fs-sm);
+            border: 1px solid var(--secondary);
+
+            .lucide {
+                width: var(--fs-sm);
+                height: var(--fs-sm);
+            }
+        }
+    }
+    
+    .floorplan {
+        height: 180px;
+        border: 1px dashed var(--secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--border-radiu-de);
+        color: #9ca3af;
+    }
+
+    .placeholder-photo {
+        aspect-ratio: 3 / 2;
+        border: 1px dashed var(--secondary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+    }
+}
