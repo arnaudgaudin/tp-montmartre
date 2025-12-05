@@ -47,3 +47,84 @@ a {
     text-decoration: underline;
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  margin: 0 auto;
+  border: 1px solid var(--secondary);
+  border-radius: var(--border-radiu-lg);
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    text-align: center;
+
+    @media (min-width: 480px) {
+      flex: 1;
+    }
+  }
+
+  .required label {
+    &:after {
+      content: "*";
+      font-weight: bold;
+      color: #a00;
+    }
+  }
+
+  input, textarea {
+    border-radius: var(--border-radiu-de);
+    border: 2px solid var(--secondary);
+    transition: var(--transition-base);
+    padding: var(--space-2);
+    font-size: var(--fs-sm);
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 2px 2px 4px hsl(var(--primary-hsl) / 0.5);
+    }
+
+    @media (min-width: 480px) {
+      flex: 1;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 8rem;
+  }
+
+  button {
+    background-color: var(--primary);
+    color: #fff;
+    padding: var(--space-2) var(--space-3);
+    border: none;
+    border-radius: var(--border-radiu-lg);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    width: auto;
+    transition: var(--transition-base);
+
+    &:hover {
+      background-color: var(--primary-light);
+    }
+  }
+
+  @media (min-width: 960px) {
+    max-width: 50vw;
+  }
+}

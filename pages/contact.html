@@ -5,12 +5,40 @@
   <div class="section-hero hero condensed">
     <div class="container">
       <h1 class="title text-center">Contactez-nous</h1>
-      <div class="intro text-center">Nous vous répondrons dans les meilleurs délais</div>
+      <div class="intro text-center">Nous vous répondrons dans les meilleurs délais !</div>
     </div>
   </div>
 
   <div class="section-form">
     <div class="container">
+      <form class="form" action="#" method="post">
+        <div class="form-group required">
+          <label for="firstName">Prénom</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group required">
+          <label for="lastName">Nom</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group required">
+          <label for="email">Courriel</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Téléphone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group required">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
 
     </div>
   </div>
