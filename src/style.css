@@ -7,8 +7,9 @@
 /* import alls layouts elements */
 @import "./style/layout/_header.css";
 @import "./style/layout/_footer.css";
-@import "./style/layout/_section-map.css";
 @import "./style/layout/_section-description.css";
+@import "./style/layout/_section-blog.css";
+@import "./style/layout/_section-map.css";
 
 /* zone de contenu */
 .content {

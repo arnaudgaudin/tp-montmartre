@@ -25,7 +25,7 @@
 
   --header-height: 80px;
   
-  --ff-cursive: 'Parisienne', cursive;
+  --ff-cursive: 'Parisienne', 'Brush Script MT', 'Segoe Script', 'Apple Chancery',  cursive;
   --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
 
   --fs-de: 16px;
