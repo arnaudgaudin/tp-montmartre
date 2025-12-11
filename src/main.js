@@ -25,7 +25,7 @@ document.querySelectorAll('[data-fancybox-carousel]').forEach((node) => {
   const opts = JSON.parse(node.dataset.fancyboxCarouselOptions);
   Carousel(node, opts, {
     Arrows,
-    Dots,
+    Dots
   }).init();
 });
 

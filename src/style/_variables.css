@@ -1,23 +1,20 @@
 :root {
   /* theme de couleurs */
   --primary-hsl: 25 76% 31%;
+  --primary-light-hsl: 25 66% 41%;
+  --primary-dark-hsl: 25 56% 11%;
+
   --secondary-hsl: 28 100% 86%;
-  /* Autres variations possibles : */
-  /* --primary-hsl: 0 68% 41%;
-  --secondary-hsl: 39 77% 83%; */
-  /* --primary-hsl: 25 75% 47%;
-  --secondary-hsl: 197 72% 73%; */
+  --secondary-light-hsl: 28 90% 96%;
+  --secondary-dark-hsl: 28 80% 66%;
 
   /* raccourcis pour accès direct */
   --primary: hsl(var(--primary-hsl));
+  --primary-dark: hsl(var(--primary-dark-hsl));
+  --primary-light: hsl(var(--primary-light-hsl));
   --secondary: hsl(var(--secondary-hsl));
-
-  --primary-dark: color-mix(in hsl, hsl(var(--primary-hsl)) 60%, black);
-  --primary-light: color-mix(in hsl, hsl(var(--primary-hsl)) 80%, white);
-
-  /* Secondary */
-  --secondary-dark: color-mix(in hsl, hsl(var(--secondary-hsl)) 60%, black);
-  --secondary-light: color-mix(in hsl, hsl(var(--secondary-hsl)) 80%, white);
+  --secondary-dark: hsl(var(--secondary-light-hsl));
+  --secondary-light: hsl(var(--secondary-light-hsl));
   
   --text-color: #333;
   --bg-color: #fefefe;
@@ -28,7 +25,7 @@
   --ff-cursive: 'Parisienne', 'Brush Script MT', 'Segoe Script', 'Apple Chancery',  cursive;
   --ff-sans: 'Raleway', Helvetica, Arial, sans-serif;
 
-  --fs-de: 16px;
+  --fs-de: 1rem;
   --fs-lg: 1.25rem;
   --fs-xl: 2rem;
   --fs-sm: 0.75rem;
@@ -48,7 +45,6 @@
   /* définition des rayons de bordure */
   --border-radiu-de: .5rem;
   --border-radiu-lg: 1rem;
-  --border-radiu-xl: 2rem;
 
   /* gestion transition par défaut */
   --transition-duration: 300ms;

@@ -1,38 +1,110 @@
 .section-carousel {
   --sections-p-y: 0;
-  --f-arrow-pos: var(--space-4);
+  color: #fff;
 
-  /* si précédé d'un hero on compense le gap */
-  .section-hero + & {
+  /* on compense le gap de la section qui suit */
+  & + [class*="section-"] {
     margin-top: calc(var(--sections-sep-gap) * -1);
   }
 
-  .f-button {
-    background-color: var(--primary);
-    color: #fff;
-    border-radius: var(--border-radiu-xl);
+  /* configuration slides */
+  --f-carousel-slide-aspect-ratio: 3 / 2;
 
-    &:hover, &:focus {
-      background-color: var(--primary-light);
-      color: #fff;
+  /* configuration flèches */
+  --f-arrow-pos: var(--space-4);
+  --f-arrow-color: #fff;
+  --f-arrow-bg: hsl(var(--primary-hsl) / 0.8);
+  --f-arrow-hover-bg: hsl(var(--primary-light-hsl) / 0.8);
+  --f-arrow-border-radius: 50%;
+
+  /* configuration points */
+  --f-carousel-dots-top: auto;
+  --f-carousel-dots-bottom: 0;
+
+  /* condiguration hero */
+  --f-hero-color: #fff;
+  --f-hero-bg: hsl(var(--primary-dark-hsl) / 0.4);
+  --f-hero-hover-bg: hsl(var(--primary-dark-hsl) / 0.5);
+  --f-hero-title-fz: var(--fs-lg);
+  --f-hero-intro-fz: var(--fs-sm);
+  
+  /* gestion des boutons */
+  .f-button.is-arrow {
+    --f-arrow-width: 1.5rem;
+    --f-arrow-height: var(--f-arrow-width);
+    --f-button-svg-width: calc(var(--f-arrow-width) * .7);
+    --f-button-svg-height: calc(var(--f-arrow-height) * .7);
+  }
+
+  @media (min-width: 480px) {
+    --f-carousel-slide-aspect-ratio: 2 / 1;
+  }
+
+  @media (min-width: 768px) {
+    --f-carousel-slide-aspect-ratio: 2.5 / 1;
+    --f-hero-title-fz: var(--fs-lg);
+    --f-hero-intro-fz: var(--fs-de);
+
+    .f-button.is-arrow {
+      --f-arrow-width: 2rem;
+    }
+  }
+
+  @media (min-width: 960px) {
+    --f-carousel-slide-aspect-ratio: 3 / 1;
+    --f-hero-title-fz: var(--fs-xl);
+    --f-hero-intro-fz: var(--fs-de);
+
+    .f-button.is-arrow {
+      --f-arrow-width: 3rem;
     }
   }
   
   .f-carousel {
+    /* on a déplacé les points à l'intérieur */
+    margin-bottom: 0;
+
+    &:hover .f-carousel__viewport__hero {
+      background-color: var(--f-hero-hover-bg);
+    }
+
     &__viewport {
-      
+      &__hero {
+        aspect-ratio: var(--f-hero-aspect-ratio);
+        overflow: hidden;
+        background-color: var(--f-hero-bg);
+        color: var(--f-hero-color);
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        transition: background-color var(--transition-duration) var(--transition-timing-function);
+        
+        .title {
+          font-size: var(--f-hero-title-fz);
+          text-shadow: 2px 2px 4px hsl(var(--primary-dark-hsl) / 0.7);
+        }
+
+        .intro {
+          font-size: var(--f-hero-intro-fz);
+          text-shadow: 1px 1px 2px hsl(var(--primary-dark-hsl) / 0.9);
+        }
+      }
     }
 
     &__slide {
-      
+      aspect-ratio: var(--f-carousel-slide-aspect-ratio);
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     &__dots {
-      background-color: var(--primary-dark);
-    }
-
-    &__dot {
-      color: #fff;
+      background-color: hsl(var(--primary-dark-hsl) / 0.8);
     }
   }
 }
