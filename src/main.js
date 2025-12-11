@@ -1,14 +1,32 @@
 import { createIcons, icons } from 'lucide';
+
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+import { Carousel } from '@fancyapps/ui/dist/carousel/';
+import "@fancyapps/ui/dist/carousel/carousel.css";
+
+import { Arrows } from '@fancyapps/ui/dist/carousel/carousel.arrows.js';
+import '@fancyapps/ui/dist/carousel/carousel.arrows.css';
+
+import { Dots } from '@fancyapps/ui/dist/carousel/carousel.dots.js';
+import '@fancyapps/ui/dist/carousel/carousel.dots.css';
+
 import './style.css';
 
 // Génère tous les <i data-lucide="..."> en SVG
 createIcons({ icons });
 
 //Lancement FancyBox
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
+Fancybox.bind("[data-fancybox]", {});
+
+//Lancement Carousel FancyBox
+document.querySelectorAll('[data-fancybox-carousel]').forEach((node) => {
+  const opts = JSON.parse(node.dataset.fancyboxCarouselOptions);
+  Carousel(node, opts, {
+    Arrows,
+    Dots,
+  }).init();
 });
 
 //au chargement du DOM
