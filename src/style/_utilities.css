@@ -138,6 +138,9 @@
 }
 
 .hero {
+  --hero-title-fz: var(--fs-lg);
+  --hero-intro-fz: var(--fs-sm);
+
   position: relative;
   z-index: 1;
   display: flex;
@@ -151,13 +154,35 @@
   background-color: var(--secondary);
   background-image: url('/img/hero-montmartre.jpg');
   color: #fff;
+
+  .title {
+    font-size: var(--hero-title-fz);
+    text-shadow: 2px 2px 4px hsl(var(--primary-dark-hsl) / 0.7);
+
+    & + .intro {
+      margin-top: var(--space-2);
+    }
+  }
+
+  .intro {
+    font-size: var(--hero-intro-fz);
+    text-shadow: 1px 1px 2px hsl(var(--primary-dark-hsl) / 0.9);
+  }
   
   @media (min-width: 768px) {
+    --hero-title-fz: var(--fs-lg);
+    --hero-intro-fz: var(--fs-de);
+
     min-height: 24vw;
 
     &.condensed {
       min-height: 8vw;
     }
+  }
+
+  @media (min-width: 960px) {
+    --hero-title-fz: var(--fs-lg);
+    --hero-intro-fz: var(--fs-de);
   }
 
   &::after {

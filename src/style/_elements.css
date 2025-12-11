@@ -23,18 +23,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-cursive);
   font-weight: var(--fw-bold);
   line-height: var(--lh-sm);
-  margin-top: 0;
-
-  & + * {
-    margin-top: var(--space-3);
-  }
+  margin: 0;
 }
 
 p {
   margin: 0;
-  & + p {
-    margin-top: var(--space-2);
-  }
 }
 
 a {
@@ -45,6 +38,26 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+}
+
+
+
+/* le fameux owl selector (uniquement dans les zone de texte pour pas foutre le bordel */
+/* https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/ */
+.text {
+  * + * {
+    margin-top: var(--space-3);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    & + * {
+      margin-top: var(--space-2);
+    }
+  }
+  
+  li + li {
+    margin-top: 0;
   }
 }
 
