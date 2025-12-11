@@ -7,9 +7,23 @@ footer {
   align-items: center;
   padding: var(--space-4) var(--space-3);
 
+  /* on masque la carte sur la page présentation (doublon) */
+  .content[data-page="presentation"] + & {
+    .navinfo {
+      .map { display: none; }
+      .address { margin-left: auto; }
+    }
+  }
+
   .navinfo {
     display: flex;
     gap: var(--space-3);
+    flex-direction: column;
+
+    @media (min-width: 960px) {
+      flex-direction: row;
+      gap: var(--space-4);
+    }
 
     nav {
       font-size: var(--fs-sm);
@@ -34,9 +48,19 @@ footer {
       }
     }
 
-    .address {
-      margin-left: auto;
+    .map {
+      flex: 1;
+      .map-container {
+        --map-box-shadow: none;
+        --map-aspect-ratio: 2 / 1;
 
+        @media (min-width: 960px) {
+          --map-aspect-ratio: 3 / 1;
+        }
+      }
+    }
+
+    .address {
       &-title {
         margin: 0;
       }
@@ -59,6 +83,7 @@ footer {
         display: flex;
         list-style-type: none;
         padding: 0;
+        margin: 0;
         gap: var(--space-2);
 
         li > a, li > span {

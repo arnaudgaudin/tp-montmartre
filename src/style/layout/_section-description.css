@@ -73,13 +73,9 @@
     }
     
     .floorplan {
-      height: 180px;
-      border: 1px dashed var(--secondary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--border-radiu-de);
-      color: #9ca3af;
+      img {
+        display: block;
+      }
     }
 
     .placeholder-photo {
