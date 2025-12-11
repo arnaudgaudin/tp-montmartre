@@ -7,6 +7,7 @@
 /* import alls layouts elements */
 @import "./style/layout/_header.css";
 @import "./style/layout/_footer.css";
+@import "./style/layout/_section-carousel.css";
 @import "./style/layout/_section-description.css";
 @import "./style/layout/_section-blog.css";
 @import "./style/layout/_section-map.css";
@@ -15,10 +16,10 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--sections-sep-gap);
 }
 
 [class*="section-"] {
-  padding-top: var(--space-4);
-  padding-bottom: var(--space-4);
+  padding-top: var(--sections-p-y);
+  padding-bottom: var(--sections-p-y);
 }

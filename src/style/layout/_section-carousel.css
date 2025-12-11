@@ -1,0 +1,38 @@
+.section-carousel {
+  --sections-p-y: 0;
+  --f-arrow-pos: var(--space-4);
+
+  /* si précédé d'un hero on compense le gap */
+  .section-hero + & {
+    margin-top: calc(var(--sections-sep-gap) * -1);
+  }
+
+  .f-button {
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: var(--border-radiu-xl);
+
+    &:hover, &:focus {
+      background-color: var(--primary-light);
+      color: #fff;
+    }
+  }
+  
+  .f-carousel {
+    &__viewport {
+      
+    }
+
+    &__slide {
+      
+    }
+
+    &__dots {
+      background-color: var(--primary-dark);
+    }
+
+    &__dot {
+      color: #fff;
+    }
+  }
+}

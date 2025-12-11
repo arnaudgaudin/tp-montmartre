@@ -153,10 +153,10 @@
   color: #fff;
   
   @media (min-width: 768px) {
-    min-height: 30vw;
+    min-height: 24vw;
 
     &.condensed {
-      min-height: 10vw;
+      min-height: 8vw;
     }
   }
 

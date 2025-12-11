@@ -48,6 +48,7 @@
   /* définition des rayons de bordure */
   --border-radiu-de: .5rem;
   --border-radiu-lg: 1rem;
+  --border-radiu-xl: 2rem;
 
   /* gestion transition par défaut */
   --transition-duration: 300ms;
@@ -59,4 +60,8 @@
     --fs-lg: 1.75rem;
     --fs-sm: 0.875rem;
   }
+
+  /* variables de sections */
+  --sections-sep-gap: var(--space-4);
+  --sections-p-y: var(--sections-sep-gap);
 }
