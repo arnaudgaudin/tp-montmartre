@@ -45,11 +45,14 @@ a {
 
 /* le fameux owl selector (uniquement dans les zone de texte pour pas foutre le bordel */
 /* https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/ */
+section,
 .text {
-  * + * {
+  > * + * {
     margin-top: var(--space-3);
   }
+}
 
+.text {
   h1, h2, h3, h4, h5, h6 {
     & + * {
       margin-top: var(--space-2);
