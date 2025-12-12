@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "path": "^0.12.7",
     "postcss-extend-rule": "^4.0.0",
     "postcss-import": "^16.1.1",
     "postcss-nested": "^7.0.2",

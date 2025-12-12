@@ -1,6 +1,6 @@
 import includeHtml from "vite-plugin-include-html";
 import { defineConfig } from "vite";
-import { resolve } from 'path'
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [includeHtml()],
