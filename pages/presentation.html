@@ -1,122 +1,135 @@
-<include src="./includes/pageTop.html"></include>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Au Coeur de Montmartre</title>
+  </head>
+  <body>
+    <include src="./includes/pageHeader.html"></include>
 
-<section class="content" data-page="presentation">
+    <section class="content" data-page="presentation">
 
-  <div class="section-hero hero condensed">
-    <div class="container">
-      <h1 class="title text-center">Appartement chaleureux — Montmartre</h1>
-      <div class="intro text-center">2 pièces • 48 m² • 3ᵉ étage (sans ascenseur) • Vue cour / côté calme</div>
-    </div>
-  </div>
-
-  <div class="section-description">
-    <div class="container">
-      <div class="description">
-
-        <div>
-          <!-- Localisation -->
-          <section class="description-block">
-            <h2><i data-lucide="map-pin"></i> Localisation</h2>
-            <p class="text-small">Quartier : Montmartre — Rue calme à 4 minutes à pied de la station de métro Abbesses.</p>
-            <div class="prop"><strong>Adresse</strong><span class="text-small">12 rue des Artistes, 75018 Paris</span></div>
-          </section>
-
-          <!-- Aperçu général -->
-          <section class="description-block">
-            <h2><i data-lucide="sliders"></i> Aperçu général</h2>
-            <p class="text-small">Appartement lumineux, parquet ancien et cheminée décorative.</p>
-            <div class="prop"><strong>Type</strong><span>2 pièces</span></div>
-            <div class="prop"><strong>Surface totale</strong><span>48 m²</span></div>
-            <div class="prop"><strong>Étage</strong><span>3ᵉ (sans ascenseur)</span></div>
-          </section>
-
-          <!-- Efficacité énergétique -->
-          <section class="description-block">
-            <h2><i data-lucide="thermometer"></i> Efficacité énergétique</h2>
-            <div class="prop"><strong>Diagnostic</strong><span>Classe D — 168 kWh/m².an</span></div>
-            <div class="prop"><strong>Émissions CO₂</strong><span>Classe E — 31 kgCO₂/m².an</span></div>
-            <div class="prop"><strong>Isolation</strong><span>Double vitrage récent</span></div>
-          </section>
-
-          <!-- Répartition des pièces -->
-          <section class="description-block">
-            <h2><i data-lucide="layers"></i> Répartition des pièces</h2>
-            <ul class="rooms-list">
-              <li><strong>Salon</strong> — 20 m²</li>
-              <li><strong>Chambre</strong> — 11 m²</li>
-              <li><strong>Cuisine</strong> — 7 m²</li>
-              <li><strong>Salle d'eau</strong> — 4 m²</li>
-              <li><strong>Entrée</strong> — 3 m²</li>
-              <li><strong>WC</strong> — 1 m²</li>
-            </ul>
-          </section>
-          
-          <!-- Aménagement -->
-          <section class="description-block">
-            <h2><i data-lucide="layout"></i> Plan & aménagement</h2>
-            <div class="floorplan">
-              <img src="/img/plan-technique.png" alt="Plan technique" />
-            </div>
-          </section>
-
+      <div class="section-hero hero condensed">
+        <div class="container">
+          <h1 class="title text-center">Appartement chaleureux — Montmartre</h1>
+          <div class="intro text-center">2 pièces • 48 m² • 3ᵉ étage (sans ascenseur) • Vue cour / côté calme</div>
         </div>
-
-        <!-- Colonne droite -->
-        <aside>
-          <section class="description-block">
-            <h2><i data-lucide="image"></i> Galerie photos</h2>
-            <div class="galery">
-              <a class="galery-card" href="/img/galery/inside-3051847_1920.jpg" data-fancybox="gallery" data-caption="L'entrée">
-                <img src="/img/galery/inside-3051847_640.jpg" alt="Entrée" />
-              </a>
-              <a class="galery-card" href="/img/galery/furniture-3051843_1920.jpg" data-fancybox="gallery" data-caption="Le salon 1/3">
-                <img src="/img/galery/furniture-3051843_640.jpg" alt="Salon 1/3" />
-              </a>
-              <a class="galery-card" href="/img/galery/furniture-3051844_1920.jpg" data-fancybox="gallery" data-caption="Le salon 2/3">
-                <img src="/img/galery/furniture-3051844_640.jpg" alt="Salon 2/3" />
-              </a>
-              <a class="galery-card" href="/img/galery/furniture-3051845_1920.jpg" data-fancybox="gallery" data-caption="Le salon 3/3">
-                <img src="/img/galery/furniture-3051845_640.jpg" alt="Salon 3/3" />
-              </a>
-              <a class="galery-card" href="/img/galery/bedroom-3051846_1920.jpg" data-fancybox="gallery" data-caption="La chambre à coucher">
-                <img src="/img/galery/bedroom-3051846_640.jpg" alt="Chambre à coucher" />
-              </a>
-            </div>
-          </section>
-
-          <!-- Équipements -->
-          <section class="description-block">
-            <h2><i data-lucide="tool"></i> Équipements</h2>
-            <div class="amenities">
-              <span class="chip"><i data-lucide="wifi"></i> Fibre</span>
-              <span class="chip"><i data-lucide="coffee"></i> Cuisine équipée</span>
-              <span class="chip"><i data-lucide="sun"></i> Chauffage électrique</span>
-              <span class="chip"><i data-lucide="tv"></i> Prise TV</span>
-              <span class="chip"><i data-lucide="washing-machine"></i> Lave-linge</span>
-            </div>
-          </section>
-
-          <section class="description-block">
-            <h2><i data-lucide="map"></i> À proximité</h2>
-            <ul class="text-small">
-              <li>Métro Abbesses — 4 min</li>
-              <li>Boulangerie — 2 min</li>
-              <li>Butte Montmartre — 6 min</li>
-            </ul>
-          </section>
-        </aside>
       </div>
-    </div>
-  </div>
-  
-  <div class="section-map">
-    <div class="container">
-      <h2 class="title">Emplacement</h2>
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999123456789!2d2.3423456789012345!3d48.88678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f23456789%3A0xabcdef1234567890!2sMontmartre%2C%20750018%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
 
-<include src="./includes/pageBottom.html"></include>
+      <div class="section-description">
+        <div class="container">
+          <div class="description">
+
+            <div>
+              <!-- Localisation -->
+              <section class="description-block">
+                <h2><i data-lucide="map-pin"></i> Localisation</h2>
+                <p class="text-small">Quartier : Montmartre — Rue calme à 4 minutes à pied de la station de métro Abbesses.</p>
+                <div class="prop"><strong>Adresse</strong><span class="text-small">12 rue des Artistes, 75018 Paris</span></div>
+              </section>
+
+              <!-- Aperçu général -->
+              <section class="description-block">
+                <h2><i data-lucide="sliders"></i> Aperçu général</h2>
+                <p class="text-small">Appartement lumineux, parquet ancien et cheminée décorative.</p>
+                <div class="prop"><strong>Type</strong><span>2 pièces</span></div>
+                <div class="prop"><strong>Surface totale</strong><span>48 m²</span></div>
+                <div class="prop"><strong>Étage</strong><span>3ᵉ (sans ascenseur)</span></div>
+              </section>
+
+              <!-- Efficacité énergétique -->
+              <section class="description-block">
+                <h2><i data-lucide="thermometer"></i> Efficacité énergétique</h2>
+                <div class="prop"><strong>Diagnostic</strong><span>Classe D — 168 kWh/m².an</span></div>
+                <div class="prop"><strong>Émissions CO₂</strong><span>Classe E — 31 kgCO₂/m².an</span></div>
+                <div class="prop"><strong>Isolation</strong><span>Double vitrage récent</span></div>
+              </section>
+
+              <!-- Répartition des pièces -->
+              <section class="description-block">
+                <h2><i data-lucide="layers"></i> Répartition des pièces</h2>
+                <ul class="rooms-list">
+                  <li><strong>Salon</strong> — 20 m²</li>
+                  <li><strong>Chambre</strong> — 11 m²</li>
+                  <li><strong>Cuisine</strong> — 7 m²</li>
+                  <li><strong>Salle d'eau</strong> — 4 m²</li>
+                  <li><strong>Entrée</strong> — 3 m²</li>
+                  <li><strong>WC</strong> — 1 m²</li>
+                </ul>
+              </section>
+              
+              <!-- Aménagement -->
+              <section class="description-block">
+                <h2><i data-lucide="layout"></i> Plan & aménagement</h2>
+                <div class="floorplan">
+                  <img src="/img/plan-technique.png" alt="Plan technique" />
+                </div>
+              </section>
+
+            </div>
+
+            <!-- Colonne droite -->
+            <aside>
+              <section class="description-block">
+                <h2><i data-lucide="image"></i> Galerie photos</h2>
+                <div class="galery">
+                  <a class="galery-card" href="/img/galery/inside-3051847_1920.jpg" data-fancybox="gallery" data-caption="L'entrée">
+                    <img src="/img/galery/inside-3051847_640.jpg" alt="Entrée" />
+                  </a>
+                  <a class="galery-card" href="/img/galery/furniture-3051843_1920.jpg" data-fancybox="gallery" data-caption="Le salon 1/3">
+                    <img src="/img/galery/furniture-3051843_640.jpg" alt="Salon 1/3" />
+                  </a>
+                  <a class="galery-card" href="/img/galery/furniture-3051844_1920.jpg" data-fancybox="gallery" data-caption="Le salon 2/3">
+                    <img src="/img/galery/furniture-3051844_640.jpg" alt="Salon 2/3" />
+                  </a>
+                  <a class="galery-card" href="/img/galery/furniture-3051845_1920.jpg" data-fancybox="gallery" data-caption="Le salon 3/3">
+                    <img src="/img/galery/furniture-3051845_640.jpg" alt="Salon 3/3" />
+                  </a>
+                  <a class="galery-card" href="/img/galery/bedroom-3051846_1920.jpg" data-fancybox="gallery" data-caption="La chambre à coucher">
+                    <img src="/img/galery/bedroom-3051846_640.jpg" alt="Chambre à coucher" />
+                  </a>
+                </div>
+              </section>
+
+              <!-- Équipements -->
+              <section class="description-block">
+                <h2><i data-lucide="tool"></i> Équipements</h2>
+                <div class="amenities">
+                  <span class="chip"><i data-lucide="wifi"></i> Fibre</span>
+                  <span class="chip"><i data-lucide="coffee"></i> Cuisine équipée</span>
+                  <span class="chip"><i data-lucide="sun"></i> Chauffage électrique</span>
+                  <span class="chip"><i data-lucide="tv"></i> Prise TV</span>
+                  <span class="chip"><i data-lucide="washing-machine"></i> Lave-linge</span>
+                </div>
+              </section>
+
+              <section class="description-block">
+                <h2><i data-lucide="map"></i> À proximité</h2>
+                <ul class="text-small">
+                  <li>Métro Abbesses — 4 min</li>
+                  <li>Boulangerie — 2 min</li>
+                  <li>Butte Montmartre — 6 min</li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section-map">
+        <div class="container">
+          <h2 class="title">Emplacement</h2>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999123456789!2d2.3423456789012345!3d48.88678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f23456789%3A0xabcdef1234567890!2sMontmartre%2C%20750018%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end .content -->
+
+    <include src="./includes/pageFooter.html"></include>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
