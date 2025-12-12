@@ -7,7 +7,6 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
         presentation: resolve(__dirname, 'pages/presentation.html'),
         blogMontmartre: resolve(__dirname, 'pages/blog-montmartre.html'),
         contact: resolve(__dirname, 'pages/contact.html'),
