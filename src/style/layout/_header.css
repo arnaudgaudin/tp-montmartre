@@ -46,6 +46,7 @@ header {
       font-size: var(--fs-lg);
       line-height: 1;
       text-align: left;
+      margin: 0;
 
       @media (min-width: 960px) {
         .break {
