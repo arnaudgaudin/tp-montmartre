@@ -13,7 +13,7 @@
   --primary-dark: hsl(var(--primary-dark-hsl));
   --primary-light: hsl(var(--primary-light-hsl));
   --secondary: hsl(var(--secondary-hsl));
-  --secondary-dark: hsl(var(--secondary-light-hsl));
+  --secondary-dark: hsl(var(--secondary-dark-hsl));
   --secondary-light: hsl(var(--secondary-light-hsl));
   
   --text-color: #333;
